@@ -3,7 +3,7 @@ package seminar1.geroy;
 /*
  * Разбойник
  */
-public class Outlaw extends Basegeroy {
+public class Outlaw extends Basegeroy  {
     protected int luck, armor;
 
     Outlaw(String name, int level, int health, int damage, int speed, int weapon, int luck, int armor) {
@@ -12,7 +12,8 @@ public class Outlaw extends Basegeroy {
         this.armor = armor;
 
     }
-    public Outlaw (String name){
+
+    public Outlaw(String name) {
         super(name, 4, 95, 5, 5, 3);
     }
 
@@ -26,12 +27,17 @@ public class Outlaw extends Basegeroy {
 
     @Override
     public String toString() {
-        return name;
+        return "Разбойник";
     }
 
     public String getInfo() {
-        return String.format("Разбойник: %s",
-                this.name);
+        return name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:" + speed
+                + "; оружие:" + weapon + "; удача:" + luck + "; броня:" + armor;
+    }
+
+    @Override
+    public void step() {
+      
     }
 
 }

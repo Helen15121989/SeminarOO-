@@ -10,11 +10,19 @@ public class Sniper extends Shooter {
 
     @Override
     public String toString() {
-        return name;
+        return "Снайпер";
     }
+
     public String getInfo() {
-        return String.format("Снайпер: %s",
-                this.name);
+        return name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:" + speed
+                + "; оружие:" + weapon + "; дистанция:" + distance +
+                "; максимальный выстрел:" + maxshot + "; кол-во выстрелов:" + numberShotsFired + "; точность:"
+                + accuracy;
+    }
+
+    @Override
+    public void step() {
+
     }
 
 }

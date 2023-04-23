@@ -3,10 +3,11 @@ package seminar1.geroy;
  * Создание полей данных для персонажей
  */
 
-public class Basegeroy {
+public abstract class Basegeroy implements GameInterface {
+
     protected String name;
     protected int level;
-    protected int health, damage, speed,weapon;
+    protected int health, damage, speed, weapon;
 
     Basegeroy(String name, int level, int health, int damage, int speed, int weapon) {
         this.name = name;
@@ -31,6 +32,17 @@ public class Basegeroy {
     }
 
     void expectation() {
+
+    }
+
+    @Override
+    public String getInfo() {
+        return name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:" + speed
+                + "; оружие:" + weapon;
+    }
+
+    @Override
+    public void step() {
 
     }
 
