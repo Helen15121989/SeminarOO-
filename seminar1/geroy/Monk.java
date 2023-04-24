@@ -3,9 +3,9 @@ package seminar1.geroy;
  * Монах
  */
 
-public class Monk extends Magic  {
+public class Monk extends Magic {
     public Monk(String name) {
-        super(name, 9, 99, 10, 3, 2, 35);
+        super(name, "Монах", 9, 99, 10, 3, 2, 35);
 
     }
 
@@ -15,7 +15,8 @@ public class Monk extends Magic  {
     }
 
     public String getInfo() {
-        return name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:" + speed
+        return entity +"-"+ name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:"
+                + speed
                 + "; оружие:" + weapon + "; мана:" + mana;
 
     }

@@ -5,7 +5,7 @@ package seminar1.geroy;
 
 public class Spearman extends Shooter  {
     public Spearman(String name) {
-        super(name, 15, 77, 3, 1, 2, 5, 2, 10, 0.3f);
+        super(name,"Копейщик", 15, 77, 3, 1, 2, 5, 2, 10, 0.3f);
     }
 
     @Override
@@ -14,7 +14,7 @@ public class Spearman extends Shooter  {
     }
 
     public String getInfo() {
-        return name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:" + speed
+        return entity +"-"+  name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:" + speed
                 + "; оружие:" + weapon + "; дистанция:" + distance +
                 "; максимальный выстрел:" + maxshot + "; кол-во выстрелов:" + numberShotsFired + "; точность:"
                 + accuracy;

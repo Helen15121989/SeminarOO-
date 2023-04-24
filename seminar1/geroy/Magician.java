@@ -5,7 +5,7 @@ package seminar1.geroy;
 
 public class Magician extends Magic {
     public Magician(String name) {
-        super(name, 5, 90, 5, 4, 6, 50);
+        super(name, "Колдун", 5, 90, 5, 4, 6, 50);
 
     }
 
@@ -15,7 +15,7 @@ public class Magician extends Magic {
     }
 
     public String getInfo() {
-        return name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:" + speed
+        return entity +"-"+ name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:" + speed
                 + "; оружие:" + weapon + "; мана:" + mana;
     }
 

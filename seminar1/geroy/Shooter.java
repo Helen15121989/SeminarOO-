@@ -4,9 +4,9 @@ public abstract class Shooter extends Basegeroy {
     protected int distance, maxshot, numberShotsFired;
     protected float accuracy;
 
-    Shooter(String name, int level, int health, int damage, int speed, int weapon, 
+    Shooter(String name, String intity, int level, int health, int damage, int speed, int weapon, 
             int distance, int maxshot, int numberShotsFired, float accuracy ){
-        super (name,level, health, damage, speed,weapon);
+        super (name,intity, level, health, damage, speed,weapon);
         this.distance =  distance;
         this.maxshot = maxshot;
         this.numberShotsFired = numberShotsFired;

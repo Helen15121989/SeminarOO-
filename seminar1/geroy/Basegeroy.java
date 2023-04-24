@@ -6,11 +6,13 @@ package seminar1.geroy;
 public abstract class Basegeroy implements GameInterface {
 
     protected String name;
+    protected String entity;
     protected int level;
     protected int health, damage, speed, weapon;
 
-    Basegeroy(String name, int level, int health, int damage, int speed, int weapon) {
+    Basegeroy(String name, String entity, int level, int health, int damage, int speed, int weapon) {
         this.name = name;
+        this.entity = entity;
         this.level = level;
         this.health = health;
         this.damage = damage;
@@ -19,25 +21,10 @@ public abstract class Basegeroy implements GameInterface {
 
     }
 
-    void attack() {
-
-    }
-
-    void protection() {
-
-    }
-
-    void damage() {
-
-    }
-
-    void expectation() {
-
-    }
-
+  
     @Override
     public String getInfo() {
-        return name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:" + speed
+        return entity +"-"+ name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:" + speed
                 + "; оружие:" + weapon;
     }
 

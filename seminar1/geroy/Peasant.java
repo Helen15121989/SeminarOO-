@@ -3,9 +3,9 @@ package seminar1.geroy;
 /*
  * Крестьянин
  */
-public class Peasant extends Basegeroy  {
+public class Peasant extends Basegeroy {
     public Peasant(String name) {
-        super(name, 2, 100, 2, 5, 5);
+        super(name, "Крестьянин", 2, 100, 2, 5, 5);
 
     }
 
@@ -16,8 +16,8 @@ public class Peasant extends Basegeroy  {
     }
 
     public String getInfo() {
-        return name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:" + speed
-                + "; оружие:" + weapon;
+        return entity +"-"+ name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:"
+                + speed + "; оружие:" + weapon;
     }
 
     @Override

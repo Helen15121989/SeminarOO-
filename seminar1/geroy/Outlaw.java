@@ -3,18 +3,18 @@ package seminar1.geroy;
 /*
  * Разбойник
  */
-public class Outlaw extends Basegeroy  {
+public class Outlaw extends Basegeroy {
     protected int luck, armor;
 
-    Outlaw(String name, int level, int health, int damage, int speed, int weapon, int luck, int armor) {
-        super(name, level, health, damage, speed, weapon);
+    Outlaw(String name, String entity, int level, int health, int damage, int speed, int weapon, int luck, int armor) {
+        super(name, entity, level, health, damage, speed, weapon);
         this.luck = luck;
         this.armor = armor;
 
     }
 
     public Outlaw(String name) {
-        super(name, 4, 95, 5, 5, 3);
+        super(name, "Разбойник", 4, 95, 5, 5, 3);
     }
 
     void disappearance() {
@@ -31,13 +31,14 @@ public class Outlaw extends Basegeroy  {
     }
 
     public String getInfo() {
-        return name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:" + speed
+        return entity +"-"+ name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:"
+                + speed
                 + "; оружие:" + weapon + "; удача:" + luck + "; броня:" + armor;
     }
 
     @Override
     public void step() {
-      
+
     }
 
 }

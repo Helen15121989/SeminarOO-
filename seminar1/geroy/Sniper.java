@@ -5,7 +5,7 @@ package seminar1.geroy;
 
 public class Sniper extends Shooter {
     public Sniper(String name) {
-        super(name, 9, 88, 5, 5, 10, 15, 5, 15, 0.9f);
+        super(name, "Снайпер", 9, 88, 5, 5, 10, 15, 5, 15, 0.9f);
     }
 
     @Override
@@ -14,7 +14,7 @@ public class Sniper extends Shooter {
     }
 
     public String getInfo() {
-        return name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:" + speed
+        return entity +"-"+  name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:" + speed
                 + "; оружие:" + weapon + "; дистанция:" + distance +
                 "; максимальный выстрел:" + maxshot + "; кол-во выстрелов:" + numberShotsFired + "; точность:"
                 + accuracy;

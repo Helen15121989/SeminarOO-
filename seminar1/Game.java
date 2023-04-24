@@ -9,7 +9,7 @@ import seminar1.geroy.Magician;
 import seminar1.geroy.Monk;
 import seminar1.geroy.Outlaw;
 import seminar1.geroy.Peasant;
-//import seminar1.geroy.Sniper;
+import seminar1.geroy.Sniper;
 import seminar1.geroy.Spearman;
 import seminar1.geroy.Names;
 
@@ -20,7 +20,7 @@ public class Game {
         ArrayList<Basegeroy> team1 = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            switch (new Random().nextInt(4)) {
+            switch (new Random().nextInt(5)) {
                 case 0:
 
                     team1.add(new Crossbowman(getName()));
@@ -34,13 +34,16 @@ public class Game {
                 case 3:
                     team1.add(new Outlaw(getName()));
                     break;
+                case 4:
+                    team1.add(new Sniper(getName()));
+                    break;
 
             }
         }
         ArrayList<Basegeroy> team2 = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            switch (new Random().nextInt(4)) {
+            switch (new Random().nextInt(5)) {
                 case 0:
                     team2.add(new Spearman(getName()));
                     break;
@@ -53,14 +56,17 @@ public class Game {
                 case 3:
                     team2.add(new Outlaw(getName()));
                     break;
+                case 4:
+                    team1.add(new Crossbowman(getName()));
+                    break;
 
             }
-            System.out.println("Команда1: ");
-            team1.forEach(n -> System.out.println(n.getInfo()));
-            System.out.println("Команда2: ");
-            team2.forEach(n -> System.out.println(n.getInfo()));
 
         }
+        System.out.println("Команда1: ");
+        team1.forEach(n -> System.out.println(n.getInfo()));
+        System.out.println("Команда2: ");
+        team2.forEach(n -> System.out.println(n.getInfo()));
 
     }
 
