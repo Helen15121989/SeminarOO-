@@ -16,48 +16,49 @@ import seminar1.geroy.Names;
 public class Game {
 
     public static void main(String[] args) {
+        
 
         ArrayList<Basegeroy> team1 = new ArrayList<>();
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             switch (new Random().nextInt(5)) {
                 case 0:
 
-                    team1.add(new Crossbowman(getName()));
+                    team1.add(new Crossbowman(team1, getName()));
                     break;
                 case 1:
-                    team1.add(new Peasant(getName()));
+                    team1.add(new Peasant(team1, getName()));
                     break;
                 case 2:
-                    team1.add(new Monk(getName()));
+                    team1.add(new Monk(team1, getName()));
                     break;
                 case 3:
-                    team1.add(new Outlaw(getName()));
+                    team1.add(new Outlaw(team1, getName()));
                     break;
                 case 4:
-                    team1.add(new Sniper(getName()));
+                    team1.add(new Sniper(team1, getName()));
                     break;
 
             }
         }
         ArrayList<Basegeroy> team2 = new ArrayList<>();
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             switch (new Random().nextInt(5)) {
                 case 0:
-                    team2.add(new Spearman(getName()));
+                    team2.add(new Spearman(team2, getName()));
                     break;
                 case 1:
-                    team2.add(new Peasant(getName()));
+                    team2.add(new Peasant(team2, getName()));
                     break;
                 case 2:
-                    team2.add(new Magician(getName()));
+                    team2.add(new Magician(team2, getName()));
                     break;
                 case 3:
-                    team2.add(new Outlaw(getName()));
+                    team2.add(new Outlaw(team2, getName()));
                     break;
                 case 4:
-                    team1.add(new Crossbowman(getName()));
+                    team1.add(new Crossbowman(team2, getName()));
                     break;
 
             }
@@ -67,26 +68,16 @@ public class Game {
         team1.forEach(n -> System.out.println(n.getInfo()));
         System.out.println("Команда2: ");
         team2.forEach(n -> System.out.println(n.getInfo()));
+        // team1.forEach(n -> n.getDamage(5));
+        // team1.forEach(n->n.step());
+        // team1.forEach(n -> System.out.println(n.getInfo()));
+        team2.sort(Basegeroy::compareTo);
+        System.out.println(team2);
 
     }
 
     private static String getName() {
         return String.valueOf(Names.values()[new Random().nextInt(Names.values().length)]);
     }
-
-    // Crossbowman crossbowman = new Crossbowman("Тревор");
-    // System.out.println(crossbowman.getInfo());
-    // Magician magician = new Magician("Томми");
-    // System.out.println(magician.getInfo());
-    // Monk monk = new Monk("Дюк");
-    // System.out.println(monk.getInfo());
-    // Outlaw outlaw = new Outlaw ("Олаф");
-    // System.out.println(outlaw.getInfo());
-    // Peasant peasant = new Peasant ("Римми");
-    // System.out.println(peasant.getInfo());
-    // Sniper sniper = new Sniper("Эдвард");
-    // System.out.println(sniper.getInfo());
-    // Spearman spearman = new Spearman("Ричард");
-    // System.out.println(spearman.getInfo());
 
 }

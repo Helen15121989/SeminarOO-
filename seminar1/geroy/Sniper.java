@@ -3,9 +3,11 @@ package seminar1.geroy;
  * Снайпер
  */
 
+import java.util.ArrayList;
+
 public class Sniper extends Shooter {
-    public Sniper(String name) {
-        super(name, "Снайпер", 9, 88, 5, 5, 10, 15, 5, 15, 0.9f);
+    public Sniper(ArrayList<Basegeroy> team, String name) {
+        super(10,team, name, "Снайпер", 9, 88, 100, new int[] { 5, 5 }, 5, 10, 15, 5, 15, 0.9f);
     }
 
     @Override
@@ -14,10 +16,10 @@ public class Sniper extends Shooter {
     }
 
     public String getInfo() {
-        return entity +"-"+  name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:" + speed
+        return entity + "-" + name + "," + " уровень:" + level + "; здоровье:" + health +  "; скорость:" + speed
                 + "; оружие:" + weapon + "; дистанция:" + distance +
                 "; максимальный выстрел:" + maxshot + "; кол-во выстрелов:" + numberShotsFired + "; точность:"
-                + accuracy;
+                + accuracy + "; инициатива: " + initiative;
     }
 
     @Override

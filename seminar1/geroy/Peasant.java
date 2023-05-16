@@ -1,11 +1,13 @@
 package seminar1.geroy;
 
+import java.util.ArrayList;
+
 /*
  * Крестьянин
  */
 public class Peasant extends Basegeroy {
-    public Peasant(String name) {
-        super(name, "Крестьянин", 2, 100, 2, 5, 5);
+    public Peasant(ArrayList<Basegeroy> team,String name) {
+        super(1,team, name, "Крестьянин", 2, 90,100,new int []{1,1}, 2, 5);
 
     }
 
@@ -16,8 +18,8 @@ public class Peasant extends Basegeroy {
     }
 
     public String getInfo() {
-        return entity +"-"+ name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:"
-                + speed + "; оружие:" + weapon;
+        return entity +"-"+ name + "," + " уровень:" + level + "; здоровье:" + health + "; скорость:"
+                + speed + "; оружие:" + weapon + "; инициатива: " + initiative;
     }
 
     @Override

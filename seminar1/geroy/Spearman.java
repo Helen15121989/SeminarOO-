@@ -3,9 +3,11 @@ package seminar1.geroy;
  * Копейщик
  */
 
-public class Spearman extends Shooter  {
-    public Spearman(String name) {
-        super(name,"Копейщик", 15, 77, 3, 1, 2, 5, 2, 10, 0.3f);
+import java.util.ArrayList;
+
+public class Spearman extends Shooter {
+    public Spearman(ArrayList<Basegeroy> team, String name) {
+        super(7,team, name, "Копейщик", 15, 77, 100, new int[] { 2, 3 }, 3, 1, 5, 2, 10, 0.3f);
     }
 
     @Override
@@ -14,10 +16,10 @@ public class Spearman extends Shooter  {
     }
 
     public String getInfo() {
-        return entity +"-"+  name + "," + " уровень:" + level + "; здоровье:" + health + "; урон:" + damage + "; скорость:" + speed
+        return entity + "-" + name + "," + " уровень:" + level + "; здоровье:" + health +  "; скорость:" + speed
                 + "; оружие:" + weapon + "; дистанция:" + distance +
                 "; максимальный выстрел:" + maxshot + "; кол-во выстрелов:" + numberShotsFired + "; точность:"
-                + accuracy;
+                + accuracy + "; инициатива: " + initiative;
     }
 
     @Override
